@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div id="auth-page">
+    <div class="auth-container">
+      <div id="login-form" class="auth-form">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="Username" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button id="login-submit">Login</button>
+        <p>Don't have an account? <a href="#" id="switch-to-signup">Sign Up</a></p>
+      </div>
+      <div id="signup-form" class="auth-form hidden">
+        <h2>Sign Up</h2>
+        <input type="text" id="signup-username" placeholder="Username" required>
+        <input type="password" id="signup-password" placeholder="Password" required>
+        <button id="signup-submit">Sign Up</button>
+        <p>Already have an account? <a href="#" id="switch-to-login">Login</a></p>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="main-content" class="hidden">
+    
+    <header>
+      <h1>Movie Website</h1>
+      <nav>
+        <a href="#" id="home-link">Home</a>
+        <a href="#" id="favorites-link">Favorites</a>
+        <button id="logout-btn">Logout</button>
+      </nav>
+    </header>
+
+   
+    <main>
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search for movies...">
+        <button id="search-btn">Search</button>
+      </div>
+      <div id="results" class="results"></div>
+      <div id="pagination" class="pagination hidden">
+        <button id="prev-btn">Previous</button>
+        <span id="page-info"></span>
+        <button id="next-btn">Next</button>
+      </div>
+    </main>
+
+   
+    <div id="favorites-page" class="page hidden">
+      <h2>Favorites</h2>
+      <div id="favorites-list" class="results"></div>
+      <button id="back-to-main">Back to Main</button>
+    </div>
+  </div>
+
+  
+  <div id="movie-details-page" class="hidden">
+    <button id="back-to-main-from-details">Back to Main</button>
+    <h2 id="movie-details-title"></h2>
+    <img id="movie-details-poster" src="" alt="Movie Poster">
+    <p id="movie-details-year"></p>
+    <p id="movie-details-plot"></p>
+    <div class="rating">
+      <h3>Rate this movie:</h3>
+      <div class="stars">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+      </div>
+      <p id="rating-feedback"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
